@@ -40,7 +40,9 @@ jobs:
         git clone --depth=1 https://github.com/bonjovis/rt-n56u.git /opt/rt-n56u
         fi
         cd /opt/rt-n56u/toolchain-mipsel
-        sh dl_toolchain.sh
+        #sh dl_toolchain.sh
+        sh clean_toolchain
+        sh build_toolchain
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
